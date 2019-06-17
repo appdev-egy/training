@@ -54,9 +54,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
                 String input = userinput.getText().toString();
-                if (input.isEmpty()){
-                    Toast.makeText(getBaseContext(), "The field is Empty!", Toast.LENGTH_LONG).show();
+                if (input.isEmpty() || input.equals(".")){
+                    Toast.makeText(getBaseContext(), "Invalid value", Toast.LENGTH_LONG).show();
 
                 } else {
                     double value = Double.valueOf(input);
